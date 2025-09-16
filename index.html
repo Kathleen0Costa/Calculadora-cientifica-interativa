@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Científica Kat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calculadora Científica Kat</h1>
+  <div class="calc-container">
+    <input type="text" id="display" placeholder="Digite a fórmula..." readonly>
+
+    <div class="buttons">
+      <!-- Funções científicas -->
+      <button class="func" onclick="appendValue('sin(')">sin</button>
+      <button class="func" onclick="appendValue('cos(')">cos</button>
+      <button class="func" onclick="appendValue('tan(')">tan</button>
+      <button class="func" onclick="appendValue('sqrt(')">√</button>
+
+      <button class="func" onclick="appendValue('log(')">log</button>
+      <button class="func" onclick="appendValue('ln(')">ln</button>
+      <button class="func" onclick="appendValue('^')">x^y</button>
+      <button class="func" onclick="clearDisplay()">C</button>
+
+      <!-- Linha 1 -->
+      <button onclick="appendValue('(')">(</button>
+      <button onclick="appendValue(')')">)</button>
+      <button onclick="appendValue('%')">%</button>
+      <button class="op" onclick="appendValue('/')">÷</button>
+      
+      <!-- Linha 2 -->
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button class="op" onclick="appendValue('*')">×</button>
+      
+      <!-- Linha 3 -->
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button class="op" onclick="appendValue('-')">−</button>
+      
+      <!-- Linha 4 -->
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button class="op" onclick="appendValue('+')">+</button>
+      
+      <!-- Linha 5 -->
+      <button class="zero" onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
